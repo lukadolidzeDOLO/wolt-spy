@@ -1,0 +1,13 @@
+# Netlify configuration for Spy at Wolt
+# Netlify's OpenNext adapter handles Next.js App Router, API routes,
+# and image optimization automatically — no plugin needed.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+  environment = { NODE_VERSION = "22" }
+
+# Env vars to set in the Netlify dashboard (Site settings → Environment variables):
+#   DATABASE_URL = your hosted PostgreSQL connection string (required!)
+# Optional: NETLIFY_NEXT_SKEW_PROTECTION = "true" keeps players' screens
+# working when you deploy mid-game.
